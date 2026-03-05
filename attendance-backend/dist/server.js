@@ -9,7 +9,12 @@ dotenv.config();
 connectDB();
 const app = express();
 // 2. Middleware
-app.use(cors());
+app.use(cors({
+    origin: ['https://attendance-system-omega-lime.vercel.app', 'http://localhost:4200'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 import path from "path";
