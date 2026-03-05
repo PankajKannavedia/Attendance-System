@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import bcrypt from "bcrypt"; // Import bcrypt
+import bcrypt from "bcryptjs"; // Import bcryptjs
 import User from "../models/User.js";
 
 export const login = async (req: Request, res: Response) => {
