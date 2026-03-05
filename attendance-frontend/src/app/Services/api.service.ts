@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:5001/api';
+  private baseUrl = 'https://attendance-system-wdo1.vercel.app/api';
 
   constructor(private http: HttpClient) {}
 
